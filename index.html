@@ -1,0 +1,31 @@
+---
+layout: default
+---
+
+<div class="posts">
+  {% for post in site.posts %}
+    <article class="post">
+
+      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+
+      <div class="info">
+        <span class="info-line">{% if post.date %}{{ post.date | date: "%e.%m.%Y" }}{% endif %}</span>
+        <span class="info-line">{% if post.author %}{{ post.author }}{% else %} {{ site.author }} {% endif %}</span>
+      </div>
+
+      <div class="entry">
+        {% if post.photo %}
+        <div class="photo">
+          <a href="{{ site.baseurl }}{{ post.url }}">
+            <img src="{{ site.imagesDir }}/{{ post.photo }}" title="{{ post.title }}" alt="{{ post.title }}" />
+          </a>
+        </div>
+        {% endif %}
+
+        {{ post.excerpt }}
+
+      </div>
+
+    </article>
+  {% endfor %}
+</div>

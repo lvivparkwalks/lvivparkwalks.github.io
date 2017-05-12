@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<article class="post">
+  <h1>{{ page.title }}</h1>
+
+  <div class="info">
+    <span class="info-line">{% if page.date %}Дата: {{ page.date | date: "%e.%m.%Y" }}{% endif %}</span>
+    <span class="info-line">Автор: {% if page.author %}{{ page.author }}{% else %} {{ site.author }} {% endif %}</span>
+    <span class="info-line">Фото: {% if page.authorPhoto %}{{ page.authorPhoto }}{% else %} {{ site.authorPhoto }} {% endif %}</span>
+  </div>
+
+  {% if page.photo %}
+  <div class="photo">
+    <img src="{{ site.imagesDir }}/{{ page.photo }}" title="{{ page.title }}" alt="{{ page.title }}" />
+  </div>
+  {% endif %}
+
+  <div class="entry">
+    {{ content }}
+  </div>
+
+  {% if page.fbId %}
+  <div class="entry-orig">
+    <iframe src="{{ site.fbFrame.baseUrl }}?href={{ site.fbFrame.pageEncodedUrl }}{{ page.fbId }}{% if page.fbMultiplePhotos != true %}%3A0{% endif %}&width=500" width="500" height="{% if page.fbFrameHeight %}{{ page.fbFrameHeight }}{% else %}600{% endif %}" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+  </div>
+  {% endif %}
+
+</article>
