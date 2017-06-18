@@ -85,7 +85,7 @@ assets:
   sources:
     - _assets/fonts
 
-incremental: true
+incremental: false
 
 # Use the following plug-ins
 gems:
