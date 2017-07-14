@@ -347,3 +347,24 @@ footer {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 @import "highlights";
 @import "svg-icons";
+
+
+/**
+ * Pagination
+ *
+ */
+
+.pagination {
+
+  .page-link, .current-page {
+    border: 2px solid #eee;
+    border-radius: 10px;
+    padding: 8px 16px;
+    margin: 0 4px;
+  }
+
+  .page-link:hover, .current-page {
+    background: #eee;
+  }
+
+}

@@ -15,6 +15,9 @@ avatar: /images/mirka_klos_2017-04.jpg
 author: "Мірка Клос"
 authorPhoto: "Ірина Корнійчук"
 
+paginate: 10
+
+
 
 #
 # Flags below are optional
@@ -58,6 +61,13 @@ imagesDir: "/images/"
 
 excerpt_separator: <!--more-->
 
+# Facebook frame (custom html layout)
+fbFrame:
+  baseUrl: "https://www.facebook.com/plugins/post.php"
+  pageEncodedUrl: "https%3A%2F%2Fwww.facebook.com%2Flviv.park.walks%2Fposts%2F"
+
+
+
 #
 # !! You don't need to change any of the configuration flags below !!
 #
@@ -91,6 +101,7 @@ incremental: false
 gems:
   - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
   - jekyll-feed # Create an Atom feed using the official Jekyll feed gem
+  - jekyll-paginate
 
 # Exclude these files from your production _site
 exclude:
@@ -100,7 +111,3 @@ exclude:
   - README.md
   - CNAME
 
-# Facebook frame (custom html layout)
-fbFrame:
-  baseUrl: "https://www.facebook.com/plugins/post.php"
-  pageEncodedUrl: "https%3A%2F%2Fwww.facebook.com%2Flviv.park.walks%2Fposts%2F"
