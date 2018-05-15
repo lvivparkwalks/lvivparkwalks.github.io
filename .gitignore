@@ -1,4 +1,7 @@
-_site
+/_site
+/node_modules
+/vybrane
+
 .DS_Store
 .jekyll
 .jekyll-metadata
@@ -6,5 +9,4 @@ _site
 .sass-cache
 Gemfile
 Gemfile.lock
-node_modules
 package.json
