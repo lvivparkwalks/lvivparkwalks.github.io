@@ -13,18 +13,28 @@
 
 [Build A Blog With Jekyll And GitHub Pages](http://www.smashingmagazine.com/2014/08/01/build-blog-jekyll-github-pages/).
 
-## Local Development
 
-1. Install Jekyll and plug-ins.
+## Setup local environment
 
+### Install Ruby 3
 ```
+brew install ruby
 ruby -v
-sudo gem install bundler
-sudo gem install jekyll
-jekyll -v
-sudo gem install github-pages
 ```
 
-2. Git clone `git clone https://github.com/lvivparkwalks/lvivparkwalks.github.io.git`.
-3. Serve the site and watch for markup/sass changes `jekyll serve --force_polling`.
-4. View the website at [http://localhost:4000](http://localhost:4000).
+### Install Jekyll and plug-ins
+```
+
+gem install --user-install bundler jekyll jekyll-sitemap jekyll-feed jekyll-paginate github-pages
+jekyll -v
+```
+
+
+## Development
+
+### Pull project
+* Git clone `git clone https://github.com/lvivparkwalks/lvivparkwalks.github.io.git`.
+
+### Local development
+* Serve the site and watch for markup/sass changes `jekyll serve --force_polling`.
+* Website is served at [http://localhost:4000](http://localhost:4000).
